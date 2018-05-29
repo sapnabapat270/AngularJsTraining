@@ -1,0 +1,29 @@
+<h1>Student List</h1>
+
+<button ng-click="addStudent()" class="btn btn-primary btn-lg">Add Student</button>
+<div>
+
+    <label ng-hide="students.length">No students</label>
+
+    <table class="table" ng-show="students.length">
+        <tr>
+            <th>Full Name</th>
+            <th>Gender</th>
+            <th>Hobby List</th>
+              <th>Qualification</th>
+              <th>Date of Birth</th>
+            <th>Actions</th>
+        </tr>
+        <tr ng-repeat="x in students">
+            <td>{{ x.fullName }}</td>
+            <td>{{ x.gender }}</td>
+             <td>{{ x.hobby }}</td>
+             <td>{{ x.qualification }}</td>
+             <td>{{ x.bday }}</td>
+            <td><button ng-click="editStudent(x.id)">Edit</button><button ng-click="deleteStudent(x.id)">Delete</button>
+            </td>
+        </tr>
+
+    </table>
+
+</div>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Task 16+17</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+<body>
+<script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+
+<div ng-controller="myCtrl" ng-app="myApp">
+
+    <label>Enter user text</label>
+    <input type="text" ng-model="userText">
+    {{userText|uppercase}}
+    <div class="alert" ng-class="{'alert-warning':userText.length<5,'alert-danger':userText.length>5}" ng-show="userText.length!==5">
+        using ng-class Must be 5 chars
+    </div>
+
+    <div class="alert alert-danger" ng-if="userText.length>5">
+        using ng-if Must be 5 chars
+    </div>
+    <div class="alert alert-warning" ng-if="userText.length<5">
+        using ng-if Must be 5 chars
+    </div>
+</div>
+
+</body>
+</html>
+</html>

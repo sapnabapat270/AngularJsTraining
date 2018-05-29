@@ -1,0 +1,8 @@
+{
+  "rules": [
+    {"id":"1","ruleName":"A"},
+    {"id":"2","ruleName":"B"},
+    {"id":"3","ruleName":"C"},
+    {"id":"4","ruleName":"D"}
+  ]
+}

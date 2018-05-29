@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="myApp">
+<head>
+    <title>Learn and Understand AngularJS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+
+
+<div class="container">
+
+    <div ng-controller="mainController">
+
+        <h2> ng-mouseleave and ng-mouseenter Event Example</h2>
+
+        <input type="button" ng-mouseleave="mouseLeaveEvent()" ng-mouseEnter="mouseEnterEvent()" value="Move Away From Here and towards here"><br /><br />
+
+        <span style="color:Red">No. of Times MouseEnter Event Fired: {{countMouseEnter}}</span>
+
+        <span style="color:Red">No. of Times MouseLeave Event Fired: {{countMouseLeave}}</span>
+    </div>
+
+
+</div>
+
+</body>
+</html>

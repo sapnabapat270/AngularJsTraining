@@ -1,0 +1,44 @@
+<form name="form">
+    <div class="form-group">
+        <input type="hidden" class="form-control" ng-model="student.id">
+    </div>
+    <div class="form-group">
+        <label>Full Name: </label>
+        <input type="text"  name="required" class="form-control" ng-model="student.fullName" validator="required,maxlength=50" required-error-message="Full Name is required."
+               required-success-message=" " maxlength-error-message="First Name cannot be more than 50 chars." maxlength-success-message=" ">
+    </div>
+    <div class="form-group">
+        <label>Gender: </label>
+        <input type="radio" ng-model="student.gender" value="Male">Male
+        <input type="radio" ng-model="student.gender" value="Female">Female
+    </div>
+    <div class="form-group">
+        <label>Hobbies: </label>
+        <div ng-repeat="hobby in hobbies">
+            <label for="chkCustomer_{{hobby.HobbyId}}">
+                <input id="chkCustomer_{{hobby.HobbyId}}" type="checkbox" ng-model="hobby.Selected" />
+                {{hobby.Name}}
+            </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Highest Qualification: </label>
+        <select ng-model="student.qualification" name="qual" validator="required" required-error-message="Qualification is required." required-success-message=" ">
+            <option ng-repeat="qual in qualifications" value={{qual}}>
+                {{qual}}
+            </option>
+        </select>
+
+    </div>
+
+    <div class="form-group">
+        <label>Date of birth:</label>
+        <input type="date" name="dob" id="datefield" ng-model="student.bday" validator="required" required-error-message="Birth date is required." required-success-message=" ">
+    </div>
+
+
+    <button validation-submit="form" ng-click="addStudent()" class="btn btn-primary">Submit</button>
+    <button validation-reset="form" class="btn btn-secondary">Reset</button>
+    <button class="btn btn-secondary" ng-click="backToStudentList()">Back</button>
+
+</form>
